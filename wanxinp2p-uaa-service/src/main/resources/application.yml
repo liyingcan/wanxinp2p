@@ -1,0 +1,39 @@
+server:
+  port: 53020
+  servlet:
+    context-path: /uaa
+spring:
+  application:
+    name: uaa-service
+  main:
+    allow-bean-definition-overriding: true
+  http:
+    encoding:
+        charset: UTF-8
+        force: true
+        enabled: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/p2p_uaa?serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: root
+logging:
+  config: classpath:log4j2-dev.xml
+eureka:
+   instance:
+      preferIpAddress: true
+      instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:53000/eureka/
+ribbon:
+   MaxAutoRetries: 2
+   ConnectTimeout: 3000
+   OkToRetryOnAllOperations: false
+   ReadTimeout: 20000
+   MaxAutoRetriesNextServer: 2
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000

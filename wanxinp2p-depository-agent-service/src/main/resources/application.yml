@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: depository-agent-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/p2p_bank_depository?serverTimezone=GMT%2B8&useSSL=false
+    username: root
+    password: root
+server:
+    port: 53040
+    servlet:
+       context-path: /depository-agent
+logging:
+  config: classpath:log4j2-dev.xml
+eureka:
+  client:
+     serviceUrl:
+        defaultZone: http://localhost:53000/eureka/
+  instance:
+     preferIpAddress: true
+     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+depository:
+    url: ss
+    publicKey: ss
+p2p:
+  publicKey: ss
+  privateKey: ss
+  code: ss
+rocketmq:
+   name-server: 192.168.137.200:9876
+   producer:
+      group: my-group
