@@ -7,7 +7,7 @@ import lombok.Data;
 /**
  * 与银行存管系统对接使用的签名请求数据
  */
-//@Data
+@Data
 @ApiModel(value = "GatewayRequest", description = "与银行存管系统对接使用的签名请求数据")
 public class GatewayRequest {
 
@@ -25,46 +25,6 @@ public class GatewayRequest {
 
 	@ApiModelProperty("银行存管系统地址")
 	private String depositoryUrl;
-
-	public String getServiceName() {
-		return serviceName;
-	}
-
-	public void setServiceName(String serviceName) {
-		this.serviceName = serviceName;
-	}
-
-	public String getPlatformNo() {
-		return platformNo;
-	}
-
-	public void setPlatformNo(String platformNo) {
-		this.platformNo = platformNo;
-	}
-
-	public String getReqData() {
-		return reqData;
-	}
-
-	public void setReqData(String reqData) {
-		this.reqData = reqData;
-	}
-
-	public String getSignature() {
-		return signature;
-	}
-
-	public void setSignature(String signature) {
-		this.signature = signature;
-	}
-
-	public String getDepositoryUrl() {
-		return depositoryUrl;
-	}
-
-	public void setDepositoryUrl(String depositoryUrl) {
-		this.depositoryUrl = depositoryUrl;
-	}
 
 
 }

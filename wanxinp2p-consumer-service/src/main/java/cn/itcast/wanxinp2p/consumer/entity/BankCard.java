@@ -15,8 +15,8 @@ import java.io.Serializable;
  *
  * @author zhupeiyuan
  * @since 2019-05-07
- */
-//@Data
+// */
+@Data
 @TableName("bank_card")
 public class BankCard implements Serializable {
 
@@ -64,61 +64,7 @@ public class BankCard implements Serializable {
     @TableField("STATUS")
     private Integer status;
 
-	public Long getId() {
-		return id;
-	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getConsumerId() {
-		return consumerId;
-	}
-
-	public void setConsumerId(Long consumerId) {
-		this.consumerId = consumerId;
-	}
-
-	public String getBankCode() {
-		return bankCode;
-	}
-
-	public void setBankCode(String bankCode) {
-		this.bankCode = bankCode;
-	}
-
-	public String getBankName() {
-		return bankName;
-	}
-
-	public void setBankName(String bankName) {
-		this.bankName = bankName;
-	}
-
-	public String getCardNumber() {
-		return cardNumber;
-	}
-
-	public void setCardNumber(String cardNumber) {
-		this.cardNumber = cardNumber;
-	}
-
-	public String getMobile() {
-		return mobile;
-	}
-
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;

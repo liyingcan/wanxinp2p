@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * 当前登录用户
  */
-//@Data
+@Data
 public class LoginUser {
 	/**
 	 * tenantId : 1
@@ -24,47 +24,5 @@ public class LoginUser {
 	private String mobile;
 	private String userAuthorities;
 	private String clientId;
-	public String getTenantId() {
-		return tenantId;
-	}
-	public void setTenantId(String tenantId) {
-		this.tenantId = tenantId;
-	}
-	public String getDepartmentId() {
-		return departmentId;
-	}
-	public void setDepartmentId(String departmentId) {
-		this.departmentId = departmentId;
-	}
-	public String getPayload() {
-		return payload;
-	}
-	public void setPayload(String payload) {
-		this.payload = payload;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getMobile() {
-		return mobile;
-	}
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-	public String getUserAuthorities() {
-		return userAuthorities;
-	}
-	public void setUserAuthorities(String userAuthorities) {
-		this.userAuthorities = userAuthorities;
-	}
-	public String getClientId() {
-		return clientId;
-	}
-	public void setClientId(String clientId) {
-		this.clientId = clientId;
-	}
 
 }

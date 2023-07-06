@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 
-//@Data
+@Data
 //@NoArgsConstructor
 //@AllArgsConstructor
 @TableName("account")
@@ -72,51 +72,5 @@ public class Account implements Serializable {
 	 */
 	@TableField("DOMAIN")
 	private String domain;
-
-	public String getMobile() {
-		return this.mobile;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getSalt() {
-		return salt;
-	}
-	public void setSalt(String salt) {
-		this.salt = salt;
-	}
-	public Integer getStatus() {
-		return status;
-	}
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-	public String getDomain() {
-		return domain;
-	}
-	public void setDomain(String domain) {
-		this.domain = domain;
-	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
 
 }

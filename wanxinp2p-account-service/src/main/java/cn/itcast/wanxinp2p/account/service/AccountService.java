@@ -12,7 +12,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 
 public interface AccountService extends IService<Account> {
-	//okhttp3
+	/**
+	 * 获取手机号验证码
+	 * @param mobile 手机号
+	 * @return
+	 */
     RestResponse getSMSCode(String mobile) ;
     /**
      * 校验手机号和验证码

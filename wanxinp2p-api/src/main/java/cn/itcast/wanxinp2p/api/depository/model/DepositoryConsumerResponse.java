@@ -8,7 +8,7 @@ import lombok.Data;
  * 开户返回参数信息
  * </p>
  */
-//@Data
+@Data
 public class DepositoryConsumerResponse extends DepositoryBaseResponse {
 
 	@ApiModelProperty("银行代码")
@@ -17,20 +17,5 @@ public class DepositoryConsumerResponse extends DepositoryBaseResponse {
 	@ApiModelProperty("银行名称")
 	private String bankName;
 
-	public String getBankCode() {
-		return bankCode;
-	}
-
-	public void setBankCode(String bankCode) {
-		this.bankCode = bankCode;
-	}
-
-	public String getBankName() {
-		return bankName;
-	}
-
-	public void setBankName(String bankName) {
-		this.bankName = bankName;
-	}
 	
 }

@@ -9,6 +9,7 @@ import lombok.Data;
 
 @TableName("consumer")
 //@Data
+//和数据库表中13列对应
 public class Consumer {
 	/**
 	 * 主键
@@ -61,7 +62,7 @@ public class Consumer {
 	@TableField("is_bind_card")
 	private Integer isBindCard;
 	/**
-	 * 
+	 * 可贷额度
 	 */
 	@TableField("loan_amount")
 	private Integer loanAmount;
