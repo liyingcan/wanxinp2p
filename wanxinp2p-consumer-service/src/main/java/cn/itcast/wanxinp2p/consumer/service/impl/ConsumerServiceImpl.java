@@ -86,6 +86,13 @@ public class ConsumerServiceImpl extends ServiceImpl<ConsumerMapper,Consumer> im
         Consumer consumer=getOne(new QueryWrapper<Consumer>().lambda().eq(Consumer::getMobile,mobile));
         return convertConsumerEntityToDTO(consumer);
     }
+
+	/**
+	 * 根据手机号获取用户信息
+	 * @param mobile 手机号
+	 * @param throwEx 不存在是否抛出异常
+	 * @return
+	 */
 	private ConsumerDTO getByMobile(String mobile,Boolean throwEx) {
 		Consumer entity=getOne(new QueryWrapper<Consumer>().lambda().eq(Consumer::getMobile,mobile));
 		return convertConsumerEntityToDTO(entity);
